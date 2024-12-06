@@ -21,7 +21,7 @@ export const deleteContact = createAsyncThunk('/phonebook/deleteContact', async 
     }
 });
 
-export const AddContact = createAsyncThunk('/phonebook/addContact', async (body, thunkAPI) => {
+export const addContact = createAsyncThunk('/phonebook/addContact', async (body, thunkAPI) => {
     try {
         const response = await axios.post(`/phonebook`, body);
         return response.data;
